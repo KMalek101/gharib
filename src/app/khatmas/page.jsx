@@ -1,12 +1,17 @@
-import ChatPage from '@/app/chat'
-import React from 'react'
+'use client'
+import { useNameHeader } from "@/context/NameHeaderContext";
+import KhatmasContent from "@/components/khatmas/KhatmasContent";
 
-const page = () => {
+const Page = () => {
+  const { nameHeader } = useNameHeader();
+  
+  console.log("The name is:", nameHeader);
+  
   return (
-    <div className='w-screen h-screen'>
-      <ChatPage />
+    <div>
+      <KhatmasContent nameHeader={nameHeader} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
