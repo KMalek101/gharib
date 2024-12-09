@@ -25,7 +25,7 @@
 //             <div class="flex h-[var(--height)]">
 //                 <SideBar />
 //                 <ChatContent nameHeader={nameHeader} />
-//                 <ChatRightBar changeNameHeader={changeNameHeader} />
+//                 <ChatRightBar />
 //             </div>
 //         </main>
 //     </>

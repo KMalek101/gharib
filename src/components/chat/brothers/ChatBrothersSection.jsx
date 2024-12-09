@@ -1,14 +1,16 @@
 import { useState } from "react";
 import ChatBrotherCard from "./ChatBrotherCard"
+import { useNameHeader } from "@/context/NameHeaderContext";
 
-export default function ChatBrotherSection( { changeNameHeader }) {
+export default function ChatBrotherSection() {
     const ARRAY_LENGTH = 5;
     const BACKGROUND_COLOR = "#212121"
     const BACKGROUND_COLOR_NEW = "#323232"
     const BROTHER_ID = "123asd"
     const brothersDataArray = ["Malek", "Moh", "Zohir", "Walid", "Moussa"];
     const [backgroundColorArray, setBackgroundColorArray] = useState(Array(ARRAY_LENGTH).fill(BACKGROUND_COLOR))
-
+    const { changeNameHeader } = useNameHeader();
+    
     const handleClick = (brother, i) => {
 
         setBackgroundColorArray(prevBackgroundColor => 
@@ -17,7 +19,8 @@ export default function ChatBrotherSection( { changeNameHeader }) {
             )
         )
 
-        changeNameHeader(brother, BROTHER_ID);
+        changeNameHeader(brother);
+
     }
 
     return(

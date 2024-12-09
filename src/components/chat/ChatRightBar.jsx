@@ -6,10 +6,8 @@ import ChatGroupsSection from "./groups/ChatGroupsSection";
 import ChatKhatmasSection from "./khatmas/ChatKhatmasSection";
 
 export default function ChatRightBar({ changeNameHeader }) {
-  // Track active tab instead of separate booleans
-  const [activeTab, setActiveTab] = useState('brothers'); // default tab
+  const [activeTab, setActiveTab] = useState('brothers'); 
 
-  // Helper function to update active tab
   const setActive = (tab) => {
     setActiveTab(tab);
   };
@@ -19,7 +17,7 @@ export default function ChatRightBar({ changeNameHeader }) {
       style={{ width: "480px" }} 
       className="border-l border-[var(--g-color)] bg-[var(--main-color)] h-[var(--height)]"
     >
-      {/* Tab buttons */}
+
       <div className="flex p-7 gap-8 justify-between">
         <div 
           onClick={() => setActive('brothers')} 
@@ -41,7 +39,6 @@ export default function ChatRightBar({ changeNameHeader }) {
         </div>
       </div>
 
-      {/* Content for each tab */}
       <div>
         {activeTab === 'brothers' && <ChatBrotherSection changeNameHeader={changeNameHeader} />}
         {activeTab === 'groups' && <ChatGroupsSection changeNameHeader={changeNameHeader} />}
