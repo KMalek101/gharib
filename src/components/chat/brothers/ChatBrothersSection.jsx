@@ -23,7 +23,7 @@ export default function ChatBrotherSection() {
         )
 
         changeNameHeader(brother);
-        router.push(`/chat/${brother}`)
+        router.push(`/chat/brothers/${brother}`)
 
     }
 

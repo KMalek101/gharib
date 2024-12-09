@@ -1,6 +1,7 @@
 import ChatGroupCard from "./ChatGroupCard"
 import { useState } from "react";
 import { useNameHeader } from "@/context/NameHeaderContext";
+import { useRouter } from "next/navigation";
 
 export default function ChatGroupsSection() {
     const ARRAY_LENGTH = 5;
@@ -11,6 +12,7 @@ export default function ChatGroupsSection() {
     const [backgroundColorArray, setBackgroundColorArray] = useState(Array(ARRAY_LENGTH).fill(BACKGROUND_COLOR))
     
     const { changeNameHeader } = useNameHeader();
+    const router = useRouter();
 
     const handleClick = (group, i) => {
 
@@ -21,6 +23,8 @@ export default function ChatGroupsSection() {
         )
 
         changeNameHeader(group);
+        router.push(`/chat/groups/${group}`);
+
     }
 
     return(
