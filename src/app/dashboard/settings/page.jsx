@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/common/header/Header";
 
 const page = () => {
   return (

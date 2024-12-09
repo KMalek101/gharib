@@ -28,6 +28,7 @@
   --fade-timing: 300ms ease-out 20ms;
   --radius: 16px;
   --height: calc(100vh - 70px);
+  --width: calc(100vh - 360px);
   --font-cairo: "Cairo", sans-serif;
 }
 

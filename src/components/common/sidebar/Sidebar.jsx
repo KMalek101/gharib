@@ -23,7 +23,7 @@ import Community from "../community/Community";
 function SideBar() {
   return (
     <>
-      <div className="w-72 fixed h-[calc(100vh-56px)] left-0 top-14 border-r border-[var(--g-color)] bg-[var(--main-color)] inline-block">
+      <div className="w-72 fixed h-[var(--height)] left-0 top-14 border-r border-[var(--g-color)] bg-[var(--main-color)] inline-block">
         <Top />
         <div className="mt-2 h-px bg-[var(--g-color)]"></div>
         <Community />
