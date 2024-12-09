@@ -4,9 +4,7 @@ import KhatmasContent from "@/components/khatmas/KhatmasContent";
 
 const Page = () => {
   const { nameHeader } = useNameHeader();
-  
-  console.log("The name is:", nameHeader);
-  
+    
   return (
     <div>
       <KhatmasContent nameHeader={nameHeader} />

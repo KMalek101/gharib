@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ChatBrotherCard from "./ChatBrotherCard"
 import { useNameHeader } from "@/context/NameHeaderContext";
+import { useRouter } from "next/navigation";
 
 export default function ChatBrotherSection() {
     const ARRAY_LENGTH = 5;
@@ -9,9 +10,10 @@ export default function ChatBrotherSection() {
     const BROTHER_ID = "123asd"
     const brothersDataArray = ["Malek", "Moh", "Zohir", "Walid", "Moussa"];
     const [backgroundColorArray, setBackgroundColorArray] = useState(Array(ARRAY_LENGTH).fill(BACKGROUND_COLOR));
-    
+
     const { changeNameHeader } = useNameHeader();
-    
+    const router = useRouter();
+
     const handleClick = (brother, i) => {
 
         setBackgroundColorArray(prevBackgroundColor => 
@@ -21,6 +23,7 @@ export default function ChatBrotherSection() {
         )
 
         changeNameHeader(brother);
+        router.push(`/chat/${brother}`)
 
     }
 
