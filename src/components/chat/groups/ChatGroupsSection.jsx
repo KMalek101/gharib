@@ -1,13 +1,16 @@
 import ChatGroupCard from "./ChatGroupCard"
 import { useState } from "react";
-export default function ChatGroupsSection({ changeNameHeader }) {
+import { useNameHeader } from "@/context/NameHeaderContext";
 
+export default function ChatGroupsSection() {
     const ARRAY_LENGTH = 5;
     const BACKGROUND_COLOR = "#212121"
     const BACKGROUND_COLOR_NEW = "#323232"
-
+    
     const groupsDataArray = ["Muslims", "Brothers", "2CP5", "2CP1", "2CP3"];
     const [backgroundColorArray, setBackgroundColorArray] = useState(Array(ARRAY_LENGTH).fill(BACKGROUND_COLOR))
+    
+    const { changeNameHeader } = useNameHeader();
 
     const handleClick = (group, i) => {
 
