@@ -16,7 +16,6 @@ export default function Circle({ width,  height,  degree, fontSize, text, backgr
                 height : `${innerHeight}px`,
                 width : `${innerWidth}px`,
                 fontSize: `${fontSize}px`,
-                // backgroundColor: `$var({backgroundColor})`
                 backgroundColor: `${backgroundColor}`
             }}> 
 
