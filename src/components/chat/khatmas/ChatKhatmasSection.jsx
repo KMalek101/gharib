@@ -1,9 +1,9 @@
 import ChatKhatmaCard from "./ChatKhatmaCard";
-import { useKhatmasContent } from "@/context/KhatmasContentContext"; 
+import { useKhatmasContent } from "@/context/KhatmasContentContext"; // Import the context
+
 export default function ChatKhatmasSection() {
-    const { updateKhatmasContent } = useKhatmasContent();
-    console.log("The value of it is : ". updateKhatmasContent);
-    
+    const { updateKhatmasContent } = useKhatmasContent(); // Destructure the update function from context
+
     const data = [
         { name: "Ghaza", percentage: 75, timeLeft: "3h 45m", status: "In Progress", personalProgress: 50 },
         { name: "Gharib", percentage: 40, timeLeft: "6h 20m", status: "Pending", personalProgress: 20 },
@@ -12,7 +12,9 @@ export default function ChatKhatmasSection() {
         { name: "Istighfar", percentage: 50, timeLeft: "2h 50m", status: "Active", personalProgress: 45 }
     ];
 
+    // Handle the click event
     const handleCardClick = (khatma) => {
+        console.log(khatma)
         updateKhatmasContent({
             name: khatma.name,
             percentage: khatma.percentage,
@@ -24,11 +26,11 @@ export default function ChatKhatmasSection() {
 
     return (
         <div>
-            {data.map((element) => (
+            {data.map((element, index) => (
                 <div 
-                    key={element.name} 
-                    onClick={() => handleCardClick(element)}  
-                    className="cursor-pointer"  
+                    key={index} 
+                    onClick={() => handleCardClick(element)} // Click event calls the handler
+                    className="cursor-pointer" // Makes the div look clickable
                 >
                     <ChatKhatmaCard 
                         Name={element.name} 
@@ -38,4 +40,4 @@ export default function ChatKhatmasSection() {
             ))}
         </div>
     );
-}    
+}

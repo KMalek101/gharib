@@ -8,20 +8,20 @@ import { KhatmasContentProvider } from "@/context/KhatmasContentContext";
 const Layout = ({ children }) => {
   return (
     <NameHeaderProvider>
-      <KhatmasContentProvider> 
         <div className="w-screen overflow-hidden h-screen flex flex-col">
           <Header />
           <div className="flex">
             <SideBar />
             <div className="ml-72 pt-14 flex w-full">
+      <KhatmasContentProvider> 
               <div className="h-screen flex-grow">{children}</div>
+      </KhatmasContentProvider>
               <div>
                 <ChatRightBar />
               </div>
             </div>
           </div>
         </div>
-      </KhatmasContentProvider>
     </NameHeaderProvider>
   );
 };

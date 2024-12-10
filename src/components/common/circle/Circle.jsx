@@ -1,8 +1,7 @@
 export default function Circle({ width,  height,  degree, fontSize, text, backgroundColor }) {
-    console.log("the width is : ", width)
-    console.log("the height is : ", height)
     const innerWidth = width - 5 ;
     const innerHeight = height - 5 ;
+    
     return(
         <div className="flex items-center justify-center rounded-full cursor-pointer z-10" style={
             {

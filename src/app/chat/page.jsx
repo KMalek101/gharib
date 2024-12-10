@@ -4,9 +4,8 @@ import ChatContent from '@/components/chat/ChatContent'
 
 const Page = () => {
   const { nameHeader } = useNameHeader();
-  
-  console.log("The name is:", nameHeader);
-  
+
+  console.log("THE NAME ")
   return (
     <div>
       <ChatContent nameHeader={nameHeader} />

@@ -16,7 +16,7 @@ function Header({ Name }){
 export default function ChatKhatmaCard({ Name , Percentage}) {
 
     return(
-        <div onClick={()=>makeMain} class="flex pl-10 pt-4 pb-4 gap-6 hover:bg-[var(--main-color-hover)] cursor-pointer" >
+        <div class="flex pl-10 pt-4 pb-4 gap-6 hover:bg-[var(--main-color-hover)] cursor-pointer" >
             <Header Name={Name} />
             <div className="pt-1">
                 <Circle width={65} height={65} degree={30} fontSize={12} text={`${Percentage}%`} backgroundColor={"var(--main-color)"}/>

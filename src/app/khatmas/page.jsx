@@ -1,21 +1,28 @@
 "use client";
 import { useKhatmasContent } from "@/context/KhatmasContentContext";
 import KhatmasContent from "@/components/khatmas/KhatmasContent";
+import { useEffect } from "react";
 
 const Page = () => {
-  const { name, percentage, timeLeft, status, personalProgress } = useKhatmasContent();
+
+  const context = useKhatmasContent();
+  useEffect(()=>{
     
+    console.log("Current Khatmas Content:", context);
+  }, [context])
+
+
   return (
     <div>
       <KhatmasContent 
-        nameHeader={name} 
-        percentage={percentage} 
-        timeLeft={timeLeft} 
-        status={status} 
-        personalProgress={personalProgress} 
+        nameHeader={context.name} 
+        percentage={context.percentage} 
+        timeLeft={context.timeLeft} 
+        status={context.status} 
+        personalProgress={context.personalProgress} 
       />
     </div>
   );
-};
+}
 
 export default Page;

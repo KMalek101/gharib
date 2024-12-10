@@ -4,14 +4,14 @@ import { useState } from "react";
 import ChatBrotherSection from "./brothers/ChatBrothersSection";
 import ChatGroupsSection from "./groups/ChatGroupsSection";
 import ChatKhatmasSection from "./khatmas/ChatKhatmasSection";
-import { KhatmasContentProvider } from "@/context/KhatmasContentContext"; // Import the provider
+import { KhatmasContentProvider } from "@/context/KhatmasContentContext";
 
 export default function ChatRightBar({ changeNameHeader }) {
   const [activeTab, setActiveTab] = useState('brothers'); 
 
   const setActive = (tab) => {
     setActiveTab(tab);
-  };
+  };z
 
   return (
     <div 
